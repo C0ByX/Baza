@@ -37,10 +37,12 @@ h2:hover{
 }
 .item{
     margin: 5px 0px;
+    color:gray;
 }
 .activeItem{
     cursor:pointer;
     transition: 0.3s;
+    color:black;
 }
 .activeItem:hover{
     transform: scale(1.02);
