@@ -30,10 +30,11 @@ h2:hover{
 }
 .instructions { 
     flex-direction: column;
-    transition: 10s;
+    transition: 0.3s;
     overflow: hidden;
     font-size: 16px;
     padding: 0px 25px;
+    display: flex;
 }
 .item{
     margin: 5px 0px;
@@ -48,12 +49,14 @@ h2:hover{
     transform: scale(1.02);
 }
 .disableInstr{
-    opacity: 0;
-    display: none;
+    height: 0; 
+    display: flex;
 }
 .activeInstr{
-    display: flex;
     animation: showBlock 0.3s linear forwards;
+}
+.hideInstr{
+    animation: hideBlock 0.3s linear forwards ;
 }
 iframe{
     width: 100%;
@@ -63,14 +66,27 @@ iframe{
 #docs-chrome{
     display: none;
 }
-
+@keyframes hideBlock {
+    0% {
+      opacity: 1;
+      transform: translateX(0);
+      max-height: 300px;
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(-100%);
+      max-height: 0;
+    }
+  }
 @keyframes showBlock {
     0% {
       opacity: 0;
       transform: translateX(-100%);
+      max-height: 0;
     }
     100% {
       opacity: 1;
       transform: translateX(0);
+      max-height: 300px;
     }
   }

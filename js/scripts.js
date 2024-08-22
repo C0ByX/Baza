@@ -1,8 +1,14 @@
 function openMenu(elem){
    let a = elem.nextElementSibling;
-    a.classList.toggle("disableInstr");
+   if(a.classList.contains('activeInstr') || a.classList.contains('hideInstr')){
+    a.classList.toggle('hideInstr');
+    a.classList.toggle('activeInstr');
+   }else{
+    a.classList.remove("disableInstr");
     a.classList.toggle("activeInstr");
-
+   }
+    
+    
 
 }
 function openDoc(elem){
