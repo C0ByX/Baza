@@ -66,6 +66,9 @@ iframe{
 #docs-chrome{
     display: none;
 }
+a{
+    margin: 5px 0px;
+}
 @keyframes hideBlock {
     0% {
       opacity: 1;
