@@ -8,27 +8,20 @@ window.onload = function (){
 
 function openMenu(elem){
     let a = elem.nextElementSibling;
-     if(window.innerWidth <= 1024){
-         if(a.classList.contains('activeInstr') || a.classList.contains('hideInstr')){
-             a.classList.toggle('hideInstr');
-             a.classList.toggle('activeInstr');
-             elem.classList.toggle('h2Col');
-         }else{
-             a.classList.remove("disableInstr");
-             a.classList.toggle("activeInstr");
-             elem.classList.toggle('h2Col');
-         }
-     }else{
-         if(a.classList.contains('activeInstr') || a.classList.contains('hideInstr')){
-             a.classList.toggle('hideInstr');
-             a.classList.toggle('activeInstr');
-             elem.classList.toggle('h2Col');
-         }else{
-             a.classList.remove("disableInstr");
-             a.classList.toggle("activeInstr");
-             elem.classList.toggle('h2Col');
-         }
-     }
+    if (a.style.height === "0px") {
+        a.style.height = `${ a.scrollHeight }px`
+    } else {
+        a.style.height = `${ a.scrollHeight }px`;
+        window.getComputedStyle(a, null).getPropertyValue("height");
+        a.style.height = "0";
+    }
+    a.addEventListener("transitionend", () => {
+        if (a.style.height !== "0px") {
+            a.style.height = "auto"
+        }
+    });
+        elem.classList.toggle('h2Col');
+     
    
  }
  
