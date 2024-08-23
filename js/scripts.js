@@ -11,17 +11,25 @@ function openMenu(elem){
     
 
 }
+
+function openHome(){
+    let frame = document.querySelector("iframe"),
+        c = document.querySelector('.leftScreen');
+
+    frame.remove();
+    c.classList.remove('disableFrm')
+}
 function openDoc(elem){
     let frame = document.querySelector("iframe"),
         a = elem.getAttribute('src'),
         b = document.createElement("iframe"),
-        c = document.querySelector('.baza');
+        c = document.querySelector('.leftScreen');
     if(frame){
        frame.remove();
        b.src = a;
        document.querySelector('.content').appendChild(b);
     }else{
-        c.remove();
+        c.classList.add('disableFrm');
         b.src = a;
         document.querySelector('.content').appendChild(b);
     } 
