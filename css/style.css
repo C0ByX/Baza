@@ -172,7 +172,7 @@ iframe{
     }
     .imgCont{
         height: auto;
-        width: auto;
+        width: 100vh;
     }
     h2{
         padding: 10px 25%;
