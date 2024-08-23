@@ -164,8 +164,10 @@ iframe{
         transition: 0.3s;
     }
     .menuZag{
-        padding: 15px 25%;
         border: none;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     }
     .content{
         width: 100%;
