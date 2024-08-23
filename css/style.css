@@ -6,6 +6,9 @@ html,body{
     height: 100%;
     overflow-y: hidden;
 }
+h4,h2,span{
+    user-select: none;
+}
 body{
     display:flex;
     flex-direction: row;
