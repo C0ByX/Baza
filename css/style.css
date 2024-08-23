@@ -31,11 +31,6 @@ body{
     margin: 10px;
     font-size: 19px;
 }
-.imgCont{
-    height: 50%;
-    width: 50%;
-    border-radius: 10px;
-}
 h2{
     cursor: pointer;
     transition: 0.3s;
@@ -128,11 +123,6 @@ iframe{
     }
     .content{
         width: 100%;
-    }
-    .imgCont{
-        margin-top: 25vh;
-        height: auto;
-        width: 90%;
     }
     h2{
         padding: 10px 25%;

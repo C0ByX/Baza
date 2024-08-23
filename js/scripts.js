@@ -1,7 +1,7 @@
 window.onload = function (){
     window.heightMenu = document.querySelector('.menuZag').clientHeight;
     window.innerWidth <= 1024 ? document.querySelector('.content').style.marginTop = heightMenu+"px" : '';
-     
+    window.innerWidth <= 1024 ? document.querySelector('.menuZag').removeAttribute('onclick'):'';
 }
 
 function openMenu(elem){
@@ -63,6 +63,7 @@ function openMenu(elem){
          c = document.querySelectorAll('.rightScreen'),
          d = document.querySelector('.activeItemDoc'),
          e = document.querySelector('.menuList');
+         document.querySelector('.menuZag').hasAttribute('onclick') ? '': document.querySelector('.menuZag').setAttribute('onclick','openHome()');
          if(d){
              d.classList.remove('activeItemDoc');
              elem.classList.add('activeItemDoc');
