@@ -103,22 +103,13 @@ iframe{
 .menuZag:active{
     transform: scale(1.01);
 }
-@keyframes hideMenu{
-    0% {
-        max-height: 100vh;
-      }
-      100% {
-        max-height: 0px;
-      }
+.logo{
+    width: 100%;
+    height: auto;
+    background: white;
+    margin: 30px 0px;
 }
-@keyframes showMenu {
-    0% {
-        max-height: 0%;
-      }
-      100% {
-        max-height: 100%;
-      }
-}
+
 
 
   @media (max-width: 1025px){
@@ -158,17 +149,14 @@ iframe{
     .itemMenu{
         border-top: white 1px solid;
     }
-    .hideMenu{
-        animation: hideMenu 0.6s cubic-bezier(0.61, 0.07, 0.2, 1) forwards;
-    }
-    .showMenu{
-        animation: showMenu 0.6s ease-in-out forwards;
-    }
     .menuList{
         transition: height 500ms ease;
         overflow: hidden;
     }
     .podsk{
+        display: none;
+    }
+    .logo{
         display: none;
     }
   }
