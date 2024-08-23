@@ -48,7 +48,7 @@ h2:hover{
 }
 .h2Col{
     text-decoration: underline;
-    transform: scale(1.05);
+    transform: scale(1.05) !important;
 }
 .instructions { 
     flex-direction: column;
@@ -135,5 +135,32 @@ iframe{
       opacity: 1;
       transform: translateX(0);
       max-height: 300px;
+    }
+  }
+  @media (max-width: 1025px){
+    .menu{
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        border-radius: 0px 0px 20px 20px;
+    }
+    .menuZag{
+        padding: 15px 25%;
+    }
+    .content{
+        width: 100%;
+    }
+    .imgCont{
+        height: auto;
+        width: auto;
+    }
+    h2{
+        padding: 10px 25%;
+    }
+    h2:hover{
+        transform: none;
+    }
+    .instructions{
+        padding: 0px 26%;
     }
   }
