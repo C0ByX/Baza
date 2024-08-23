@@ -14,22 +14,22 @@ function openMenu(elem){
 
 function openHome(){
     let frame = document.querySelector("iframe"),
-        c = document.querySelector('.leftScreen');
+        c = document.querySelectorAll('.rightScreen');
 
     frame.remove();
-    c.classList.remove('disableFrm')
+    c.forEach((Element) => Element.classList.remove('disableFrm'));
 }
 function openDoc(elem){
     let frame = document.querySelector("iframe"),
         a = elem.getAttribute('src'),
         b = document.createElement("iframe"),
-        c = document.querySelector('.leftScreen');
+        c = document.querySelectorAll('.rightScreen');
     if(frame){
        frame.remove();
        b.src = a;
        document.querySelector('.content').appendChild(b);
     }else{
-        c.classList.add('disableFrm');
+        c.forEach((Element) => Element.classList.add('disableFrm'));
         b.src = a;
         document.querySelector('.content').appendChild(b);
     } 
