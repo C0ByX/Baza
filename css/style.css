@@ -47,7 +47,8 @@ h2:hover{
     transform: scale(1.05);
 }
 .h2Col{
-    color:black;
+    text-decoration: underline;
+    transform: scale(1.05);
 }
 .instructions { 
     flex-direction: column;
