@@ -46,6 +46,9 @@ h2{
 h2:hover{
     transform: scale(1.05);
 }
+.h2Col{
+    color:black;
+}
 .instructions { 
     flex-direction: column;
     transition: 0.3s;
@@ -65,7 +68,11 @@ h2:hover{
     color:white;
 }
 .activeItem:hover{
-    transform: scale(1.02);
+    transform: scale(1.1);
+}
+.activeItemDoc{
+    color:black;
+    transform: scale(1.1);
 }
 .disableInstr{
     height: 0; 

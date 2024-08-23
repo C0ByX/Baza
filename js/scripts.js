@@ -3,9 +3,11 @@ function openMenu(elem){
    if(a.classList.contains('activeInstr') || a.classList.contains('hideInstr')){
     a.classList.toggle('hideInstr');
     a.classList.toggle('activeInstr');
+    elem.classList.toggle('h2Col');
    }else{
     a.classList.remove("disableInstr");
     a.classList.toggle("activeInstr");
+    elem.classList.toggle('h2Col');
    }
     
     
@@ -23,7 +25,16 @@ function openDoc(elem){
     let frame = document.querySelector("iframe"),
         a = elem.getAttribute('src'),
         b = document.createElement("iframe"),
-        c = document.querySelectorAll('.rightScreen');
+        c = document.querySelectorAll('.rightScreen'),
+        d = document.querySelector('.activeItemDoc');
+        if(d){
+            d.classList.remove('activeItemDoc');
+            elem.classList.add('activeItemDoc');
+        }else{
+            elem.classList.add('activeItemDoc');
+        }
+        
+        
     if(frame){
        frame.remove();
        b.src = a;
