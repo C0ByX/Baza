@@ -37,7 +37,6 @@ function openMenu(elem){
          a = document.querySelector('.activeItemDoc'),
          b = document.querySelector('.menuList'),
          c = document.querySelectorAll('.rightScreen');
-        console.log(heightMenu);
      if(window.innerWidth <= 1024){
         if (b.style.height === "0px") {
             b.style.height = `${ b.scrollHeight }px`
@@ -71,7 +70,8 @@ function openMenu(elem){
          a = elem.getAttribute('src'),
          b = document.createElement("iframe"),
          c = document.querySelectorAll('.rightScreen'),
-         d = document.querySelector('.activeItemDoc');
+         d = document.querySelector('.activeItemDoc'),
+         e = document.querySelector('.menuList');
          if(d){
              d.classList.remove('activeItemDoc');
              elem.classList.add('activeItemDoc');
@@ -88,7 +88,31 @@ function openMenu(elem){
          c.forEach((Element) => Element.classList.add('disableFrm'));
          b.src = a;
          document.querySelector('.content').appendChild(b);
-     } 
+     }
+
+
+
+     if(window.innerWidth <= 1024){
+        if (e.style.height === "0px") {
+            e.style.height = `${ e.scrollHeight }px`
+        } else {
+            e.style.height = `${ e.scrollHeight }px`;
+            window.getComputedStyle(e, null).getPropertyValue("height");
+            e.style.height = "0";
+        }
+        b.addEventListener("transitionend", () => {
+            if (e.style.height !== "0px") {
+                e.style.height = "auto"
+            }
+        });
+         
+     }else{
+
+     }
+
+     
+     
+      
  }
  function openUrl(elem){
      window.open(elem.getAttribute('src'),"_blank")
