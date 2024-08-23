@@ -1,8 +1,6 @@
 window.onload = function (){
     window.heightMenu = document.querySelector('.menuZag').clientHeight;
-    window.innerWidth <= 1024 ? document.querySelector('.content').style.marginTop = heightMenu : '';
-    
-    
+    heightMenu <= 1024 ? document.querySelector('.content').style.marginTop = heightMenu+"px" : '';
      
 }
 
