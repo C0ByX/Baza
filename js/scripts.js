@@ -109,5 +109,30 @@ function openMenu(elem){
  function openUrl(elem){
      window.open(elem.getAttribute('src'),"_blank")
  }
+let textTest = ''
+
+function testAreaFun(){
+    let textArea = document.querySelector('#testArea').value;
+    const regex = /^[0-9]([0-9]|[.])/gm;
+
+    // Alternative syntax using RegExp constructor
+    // const regex = new RegExp('^[0-9]([0-9]|[.])', 'gm')
+
+    const str = textArea;
+    const subst = `new`;
+
+    // The substituted value will be contained in the result variable
+    const result = str.replace(regex, subst);
+    
+
+    let massText = result.split('new');
+
+    massText.forEach((element) => {
+        let blockP = document.createElement('p');
+        blockP.innerHTML = element;
+        document.body.appendChild(blockP);
+
+    })
 
 
+}

@@ -223,10 +223,32 @@
                     class="item activeItem">Таблица проверок</span>
                 </div>
             </div>
+            <div class="itemMenu">
+                <h2 class="zag" onclick="openMenu(this)">Чек-листы</h2>
+                <div style="height: 0px;" class="instructions">
+                    <span 
+                    src="pages/create.html"
+                    onclick="if(event.ctrlKey) { openUrl(this)}else {openDoc(this)}"
+                    class="item activeItem">Чеклист создания</span>
+                    <span 
+                    src="pages/check.html"
+                    onclick="if(event.ctrlKey) { openUrl(this)}else {openDoc(this)}"
+                    class="item activeItem">Чеклист проверки</span>
+                    
+
+
+                </div>
+            </div>
+
+
+
             <img class="logo" src="img/logo.png" alt="none">
 
 
         </div>
+
+        
+
     </section>
     
     <section class="content">
